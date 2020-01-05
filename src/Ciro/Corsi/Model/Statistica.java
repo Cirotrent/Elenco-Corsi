@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class Statistica {
 	private String insegnamento;
-	Map <String,Integer> mappaCDS;
-	
+	Map<String, Integer> mappaCDS;
+
 	public Statistica() {
-		mappaCDS=new HashMap<>();
+		mappaCDS = new HashMap<>();
 	}
 
 	public Map<String, Integer> getMappaCDS() {
@@ -21,10 +21,8 @@ public class Statistica {
 
 	@Override
 	public String toString() {
-		return "Insegnamento: "+ insegnamento+"  ->  Statistica: \n"+ stampaMappa(mappaCDS);
+		return "Insegnamento: " + insegnamento + "  ->  Statistica: \n" + stampaMappa(mappaCDS);
 	}
-
-	
 
 	public String getInsegnamento() {
 		return insegnamento;
@@ -33,15 +31,15 @@ public class Statistica {
 	public void setInsegnamento(String insegnamento) {
 		this.insegnamento = insegnamento;
 	}
-	
-	public String stampaMappa( Map<String, Integer> m) {
-		
-		StringBuilder sb=new StringBuilder();
-		for(String cds:getMappaCDS().keySet()) {
-			sb.append(" - "+ cds +" -> "+getMappaCDS().get(cds)+"\n");
+
+	public String stampaMappa(Map<String, Integer> m) {
+
+		StringBuilder sb = new StringBuilder();
+		for (String cds : getMappaCDS().keySet()) {
+			sb.append(" - " + cds + " -> " + getMappaCDS().get(cds) + "\n");
 		}
-		
+
 		return sb.toString();
 	}
-	
+
 }

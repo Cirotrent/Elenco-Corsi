@@ -9,40 +9,33 @@ import Ciro.Corsi.Model.Studente;
 
 public class StudenteDAO {
 	public Studente getNomeCognome(int matricola) {
-		
-		Studente result=null;
-		
-		String sql2="SELECT matricola, cognome, nome, CDS " + 
-				"FROM studente WHERE matricola=?";
+
+		Studente result = null;
+
+		String sql2 = "SELECT matricola, cognome, nome, CDS " + "FROM studente WHERE matricola=?";
 		try {
-		Connection conn=ConnectDB.getConnection();
-		
-		PreparedStatement st;
-		
+			Connection conn = ConnectDB.getConnection();
+
+			PreparedStatement st;
+
 			st = conn.prepareStatement(sql2);
-			st.setInt(1,matricola);
+			st.setInt(1, matricola);
 			ResultSet res = st.executeQuery();
-			if(res.next()) {
-				result=new Studente(matricola, 
-						res.getString("nome"),
-						res.getString("cognome"),
-						res.getString("CDS"));
-				
+			if (res.next()) {
+				result = new Studente(matricola, res.getString("nome"), res.getString("cognome"), res.getString("CDS"));
+
 			}
-			
-			
+
 			st.close();
-			
+
 			conn.close();
-			
+
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 			return null;
 		}
-		
-		
-		//System.out.println(result);
+
 		return result;
 	}
 }

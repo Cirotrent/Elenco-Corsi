@@ -2,34 +2,43 @@ package Ciro.Corsi.Model;
 
 public class Corso {
 
-	private String codIns;		// codice insegnamento
+	private String codIns; // codice insegnamento
 	private String nome;
 	private int crediti;
-	private int pd;				//periodo didattico
+	private int pd; // periodo didattico
+
 	public String getCodIns() {
 		return codIns;
 	}
+
 	public void setCodIns(String codIns) {
 		this.codIns = codIns;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public int getCrediti() {
 		return crediti;
 	}
+
 	public void setCrediti(int crediti) {
 		this.crediti = crediti;
 	}
+
 	public int getPd() {
 		return pd;
 	}
+
 	public void setPd(int pd) {
 		this.pd = pd;
 	}
+
 	public Corso(String codIns, String nome, int crediti, int pd) {
 		super();
 		this.codIns = codIns;
@@ -37,6 +46,7 @@ public class Corso {
 		this.crediti = crediti;
 		this.pd = pd;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -44,6 +54,7 @@ public class Corso {
 		result = prime * result + ((codIns == null) ? 0 : codIns.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -60,11 +71,10 @@ public class Corso {
 			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
 		return "Corso [codIns=" + codIns + ", nome=" + nome + ", crediti=" + crediti + ", pd=" + pd + "]";
 	}
-	
-	
-	
+
 }

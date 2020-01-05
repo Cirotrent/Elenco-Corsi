@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 /*
- * restituisci l'elenco dei corsi di un determinato periodo didattico
+ * Restituisci l'elenco dei corsi di un determinato periodo didattico
  * (tabella corso del database iscrittiCorsi)
  * 
  * INSERENDO UNA MATRICOLA NELLA CASELLA MI RESTITUISCE IL NOME E IL COGNOME DELLO STUDENTE
